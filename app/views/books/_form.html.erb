@@ -1,0 +1,22 @@
+<%= form_with(model: book, local: true) do |form| %>
+ 
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :book_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :author_tokens %>
+    <%= form.text_field :author_tokens,id: :author_tokens%>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+
+<script type="text/javascript">
+  $(function () {
+  $('#author_tokens').tokenInput('/authors.json', { crossDomain: false });
+});
+</script>

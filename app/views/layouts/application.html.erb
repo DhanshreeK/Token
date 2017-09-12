@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Autocomplete</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', "token-input",media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', "jquery.tokeninput",'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <%= yield %>
+  </body>
+</html>
